@@ -1,0 +1,118 @@
+body {
+  background-color: brown;
+}
+.container {
+  flex: 1;
+  width: 93%;
+}
+.wrapper {
+  padding-top: 4.25rem;
+  padding-bottom: 4.25rem;
+}
+.text-content {
+  width: 70%;
+  margin: auto;
+}
+.text-center {
+  align-items: center;
+}
+h2 {
+  font-weight: 700;
+  font-family: var(--secondry-font);
+  line-height: 3rem;
+  color: whitesmoke;
+  padding-bottom: 2rem;
+}
+.explore-food p {
+  color: white;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 1px;
+}
+.card {
+  background-color: transparent;
+  border-radius: 0.9375rem;
+}
+.card img {
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+  width: 500px;
+  height: 300px;
+  max-width: 100%;
+}
+.border {
+  border: 2px solid #dee2e6;
+}
+h5 {
+  color: var(--black-color);
+  text-transform: capitalize;
+  font-family: var(--secondry-font);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.main-btn {
+  display: inline-block;
+  padding: 0.625rem 1.875rem;
+  line-height: 1.5625rem;
+  background-color: rgb(138, 37, 37);
+  border: 0.1875rem solid yellow;
+  color: #fff;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  margin-left: 25%;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+  background: lavender;
+}
+.carousel-indicators {
+  bottom: -2.8125rem;
+}
+.carousel-indicators [data-bs-target] {
+  background-clip: unset;
+}
+.carousel-indicators button {
+  width: 15px;
+  height: 15px;
+  outline: auto;
+  border-radius: 50%;
+  border: none;
+  margin-right: 1rem;
+  opacity: 0.2;
+}
+.carousel-item {
+  margin-top: 3rem;
+  padding: 10rem 3.125rem;
+  background-color: white;
+  border-radius: 0.9375rem;
+  text-align: center;
+  border: 4px solid brown;
+}
+.carousel-caption {
+  bottom: 0 !important;
+}
+.carousel-caption img {
+  width: 20rem;
+  height: 200px;
+  padding: 0.3125rem;
+}
+.carousel-caption p {
+  font-size: 1.125rem;
+  line-height: 1.5625rem;
+  font-weight: 300;
+  color: var(--black-color);
+  padding: 0 11% 0.625rem;
+}
+@media screen and (max-width: 994px) {
+  .border {
+    height: 78vh;
+  }
+}
+@media screen and (min-width: 1143px) and (max-width: 1820px) {
+  .border {
+    height: 84vh;
+  }
+}

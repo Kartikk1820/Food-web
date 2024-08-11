@@ -1,0 +1,54 @@
+<% layout("/layouts/boilerplate") %>
+<link href="/css/contact.css" rel="stylesheet" />
+
+<div class="inner-container">
+  <div class="row pt-5 px-3 pb-3">
+    <div class="col md-6 get-in-touch">
+      <h1 class="get-in-touch-heading">GET IN TOUCH</h1>
+      <p>
+        If you have any questions, feel free to reach out to us through the
+        following channels:
+      </p>
+      <p><i class="fa-solid fa-phone icon"></i>XXXXXXXXXX</p>
+      <p>
+        <i class="fa-solid fa-envelope icon"></i>info@foodorderingwebsite.com
+      </p>
+      <p><i class="fa-solid fa-globe icon"></i>www.foodorderingwebsite.com</p>
+      <p>
+        <i class="fa-solid fa-location-dot icon"></i>123 Food Street,New
+        Delhi,45678
+      </p>
+    </div>
+    <div class="col md-6 mt-4 pe-4 form-container">
+      <h2 class="form-heading">Contact Us</h2>
+      <form method="post" action="/contact">
+        <div class="row">
+          <div class="col md-6 mb-3">
+            <label for="firstname" class="form-label">First Name</label>
+            <input name="firstname" type="text" class="form-control" required />
+            <div class="valid-feedback">Name looks good!</div>
+          </div>
+          <div class="col md-6 mb-3">
+            <label for="lastname" class="form-label">Last Name</label>
+            <input name="lastname" type="text" class="form-control" />
+          </div>
+        </div>
+        <div class="md-6 mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input name="email" type="email" class="form-control" required />
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea
+            name="message"
+            type="text"
+            class="form-control"
+            required
+          ></textarea>
+        </div>
+        <button class="btn submit-btn mt-3">Submit</button>
+        <br /><br />
+      </form>
+    </div>
+  </div>
+</div>

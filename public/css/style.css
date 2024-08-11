@@ -1,0 +1,378 @@
+a {
+  text-decoration: none;
+}
+
+:root {
+  --primaryColor: #0e6253;
+  --secondaryColor: #ffc107;
+  --whiteColor: #fff;
+  --blackColor: #222;
+  --softyGreenColor: #d9f2ee;
+  --darkGreyColor: #a7a7a7;
+  --greyColor: #f5f5f5;
+  --secondry-font: "Quicksand", sans-serif;
+  --black-color: #1e1d23;
+}
+body {
+  font-family: var(--bs-body-font-family);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container {
+  flex: 1;
+  max-width: 100% !important;
+}
+
+/* navbar */
+
+.navbar {
+  height: 5rem;
+  background-color: white;
+}
+
+.profile {
+  display: flex;
+}
+
+.cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--whiteColor);
+  font-size: 20px;
+  color: var(--primaryColor);
+  text-decoration: none;
+  padding: 0 10x;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.cart:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* notification */
+.badge {
+  position: relative;
+  top: -10px;
+  right: -10px;
+  padding: 3px 8px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  z-index: 3;
+  font-size: 0.8rem;
+}
+
+/* .navbar-toggler {
+  position: absolute;
+  right: 0;
+  top: 0;
+} */
+
+.nav-link {
+  color: #222222 !important; /* to overpower bootstrap custom styling */
+}
+
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-info-socials i {
+  margin-right: 1rem;
+}
+
+.f-info {
+  text-align: center;
+  height: 8rem;
+  background-color: #ebebeb;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-evenly;
+  position: relative;
+  bottom: 0;
+}
+
+/* Cards */
+.recipie-card {
+  border: none !important;
+  margin-bottom: 2rem;
+}
+
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+.card-body {
+  padding: 0;
+}
+
+.card-text {
+  font-weight: 400 !important;
+}
+
+.recipie-link {
+  text-decoration: none;
+}
+
+/* Card Effect */
+
+.card-img-overlay {
+  opacity: 0;
+}
+
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+}
+
+/* Show.ejs */
+.cartBtn {
+  text-decoration: none !important;
+}
+.showBody {
+  background-color: var(--softyGreenColor);
+}
+
+.recipie-name {
+  text-align: center !important;
+}
+.recipie-name {
+  line-height: 30px;
+}
+.cartBtn {
+  background-color: rgb(197, 158, 79);
+  text-align: center;
+  padding: 10px;
+  text-decoration: none !important;
+}
+.cartBtn a,
+.newRecipie a {
+  text-decoration: none !important;
+}
+
+.buttons {
+  display: flex;
+}
+
+/* highlight menu */
+.main-highlight {
+  margin: 3% 0%;
+  padding: 2%;
+  background-color: var(--secondaryColor);
+  border-radius: 8px;
+}
+.main-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-title {
+  font-size: 20px;
+}
+.main-arrow {
+  font-size: 24px;
+}
+.back,
+.next {
+  cursor: pointer;
+}
+.back:hover,
+.next:hover {
+  color: var(--primaryColor);
+}
+.highlight-wrapper {
+  width: 100%;
+  display: flex;
+  padding: 1%;
+  border-radius: 8px;
+  gap: 1.5rem;
+  overflow-x: hidden;
+}
+.highlight-card {
+  display: flex;
+  flex-direction: row;
+  min-width: 200px;
+  height: 100%;
+  width: 80%;
+  gap: 1rem;
+  border-radius: 8px;
+  padding: 1%;
+  background-color: var(--greyColor);
+  cursor: pointer;
+}
+.highlight-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+}
+.highlight-desc p {
+  color: var(--blackColor);
+  font-size: 13px;
+}
+.highlight-card:hover {
+  background-color: var(--whiteColor);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* main menu */
+
+.main-menus {
+  min-height: 100%;
+  background-color: var(--greyColor);
+  padding: 2%;
+  border-radius: 8px;
+}
+.main-filter {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1.5rem;
+  gap: 1rem;
+}
+.back-menus,
+.next-menus {
+  cursor: pointer;
+}
+.back-menus:hover {
+  color: var(--primaryColor);
+}
+.filter-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100px;
+  gap: 1.2rem;
+}
+a {
+  display: block;
+}
+.filter-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 80px;
+  height: 100%;
+  background-color: var(--whiteColor);
+  color: var(--blackColor);
+  border-radius: 8px;
+  border: 1px solid --softyGreenColor;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.filter-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 60%;
+  font-size: 30px;
+  background-color: var(--softyGreenColor);
+  color: var(--primaryColor);
+  border-radius: 8px;
+}
+.filter-card:hover {
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+}
+.filter-card:hover .filter-icon {
+  background-color: var(--whiteColor);
+}
+.divider {
+  margin: 1rem;
+  height: 1px;
+  width: 100%;
+  background-color: var(--primaryColor);
+  border-radius: none;
+}
+.main-detail {
+  margin: 1rem 0 1rem 0;
+}
+.detail-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  width: 100%;
+  margin-top: 1rem;
+  gap: 2%;
+  border-radius: 8px;
+}
+.detial-card {
+  min-height: 280px;
+  height: 100%;
+  background-color: var(--whiteColor);
+  border-radius: 8px;
+  margin: 1% 0;
+  box-shadow: rgba(176, 176, 176, 0.2) 0px 2px 8px 0px;
+  cursor: pointer;
+}
+.detail-img {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.8);
+}
+.detail-desc {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3%;
+  width: 100%;
+}
+/* cartIcon */
+.cartIcon {
+  font-size: 2rem;
+  height: 20px;
+  width: 35px;
+  cursor: pointer;
+}
+.detail-sub {
+  font-size: 12px;
+  color: var(--darkGreyColor);
+  letter-spacing: 0.5;
+  margin: 1% 0;
+}
+.price {
+  color: var(--primaryColor);
+}
+.detail-favorites {
+  font-size: 24px;
+}
+.detail-card:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.detail-card:hover .detail-img {
+  filter: opacity(1);
+}
+.detail-card:hover .detail-name h4 {
+  color: var(--primaryColor);
+}
+.detail-card:hover .price {
+  letter-spacing: 1.5;
+}

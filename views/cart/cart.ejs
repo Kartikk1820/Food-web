@@ -1,0 +1,128 @@
+<% layout("/layouts/boilerplate") %>
+
+<style>
+  body {
+    background-color: var(--softyGreenColor);
+  }
+</style>
+<div class="main">
+  <div class="heading">Your Cart</div>
+  <% if (cartItems.length > 0) { %>
+  <div class="cartbox">
+    <div class="cartItems">
+      <% for(let i = 0; i < cartItems.length; i++){ %>
+      <div class="cartRecipie mt-3" data-index="<%= i %>">
+        <div class="recipieImgDiv">
+          <img class="recipieImg" src="<%= cartItems[i].image.url %>" />
+        </div>
+        <div class="recipieName"><%= cartItems[i].name %></div>
+        <div class="recipieEdit">
+          <div class="addBtn">
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="recipiecount"><%= cartItems[i].quantity %></div>
+          <div class="subBtn">
+            <i class="fa-solid fa-minus"></i>
+          </div>
+        </div>
+        <div class="recipiePrice d-flex">
+          <p>&#8377;</p>
+          <a class="priceVal"><%=cartItems[i].price %></a>
+        </div>
+        <form
+          method="post"
+          action="/cartItems/<%=cartItems[i]._id%>?_method=DELETE"
+        >
+          <button class="deletecartItem">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </form>
+      </div>
+      <% } %>
+      <div class="coupons">
+        <div class="coupon">
+          <div class="couponText">Have a Coupon?</div>
+          <div class="couponn-detail">
+            <input class="couponInput" placeholder="Enter coupon code" />
+            <button class="applyBtn">Apply</button>
+          </div>
+          <div class="orderBtn">
+            <a href="/cartItems/placeOrder">Place Order</a>
+          </div>
+        </div>
+      </div>
+      <% } else { %>
+      <div
+        style="
+          height: 55vh;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 2rem;
+        "
+        class="cartbox"
+      >
+        <p>Your cart is empty.</p>
+        <% } %>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".addBtn").forEach(function (button) {
+        button.addEventListener("click", function () {
+          const cartRecipie = this.closest(".cartRecipie");
+          const index = cartRecipie.getAttribute("data-index");
+          const recipieCountElement =
+            cartRecipie.querySelector(".recipiecount");
+          let currentCount = parseInt(recipieCountElement.textContent);
+          currentCount++;
+          recipieCountElement.textContent = currentCount;
+
+          // Update the quantity in the server/database if needed
+          // Example:
+          // updateCartItemQuantity(index, currentCount);
+        });
+      });
+
+      document.querySelectorAll(".subBtn").forEach(function (button) {
+        button.addEventListener("click", function () {
+          const cartRecipie = this.closest(".cartRecipie");
+          const index = cartRecipie.getAttribute("data-index");
+          const recipieCountElement =
+            cartRecipie.querySelector(".recipiecount");
+          let currentCount = parseInt(recipieCountElement.textContent);
+
+          if (currentCount > 0) {
+            currentCount--;
+            recipieCountElement.textContent = currentCount;
+
+            // Update the quantity in the server/database if needed
+            // Example:
+            // updateCartItemQuantity(index, currentCount);
+          }
+        });
+      });
+
+      // Example function to update the quantity in the server/database
+      function updateCartItemQuantity(index, quantity) {
+        fetch("/update-cart-item", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ index, quantity }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Success:", data);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
+    });
+  </script>
+</div>

@@ -1,0 +1,111 @@
+<% layout("/layouts/boilerplate.ejs") -%>
+
+<!-- main highlight-->
+<div class="main-highlight">
+  <!-- title section and arrow -->
+  <div class="main-header">
+    <h2 class="main-title">Recommendations</h2>
+    <div class="main-arrow">
+      <ion-icon class="back" name="chevron-back-circle-outline"></ion-icon>
+      <ion-icon class="next" name="chevron-forward-circle-outline"></ion-icon>
+    </div>
+  </div>
+  <!-- highlight menu -->
+  <div class="highlight-wrapper">
+    <%for(recipie of highlightRecipie){ %>
+    <div class="highlight-card">
+      <img class="highlight-img" src="<%=recipie.image.url%>" />
+      <div class="highlight-desc">
+        <h4><%= recipie.name %></h4>
+        <p>&#8377;<%=recipie.price.toLocaleString("en-IN") %></p>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</div>
+<!-- main menus / order -->
+<div class="main-menus">
+  <!--filter section-->
+  <div class="main-filter">
+    <div>
+      <h2 class="main-title">Menu<br />Category</h2>
+      <div class="main-arrow">
+        <ion-icon class="back" name="chevron-back-circle-outline"></ion-icon>
+        <ion-icon class="next" name="chevron-forward-circle-outline"></ion-icon>
+      </div>
+    </div>
+    <div class="filter-wrapper">
+      <div class="filter-card">
+        <div class="filter-icon">
+          <i class="fa-solid fa-utensils"></i>
+        </div>
+        <p>All Menus</p>
+      </div>
+      <a href="pizza.html" class="filter-card">
+        <div class="filter-icon"><i class="fa-solid fa-pizza-slice"></i>></div>
+        <p>Pizza</p>
+      </a>
+      <a class="filter-card">
+        <div class="filter-icon">
+          <i class="fa-solid fa-wine-glass"></i>
+        </div>
+        <p>Wine</p>
+      </a>
+      <a class="filter-card">
+        <div class="filter-icon">
+          <i class="fa-solid fa-ice-cream"></i>
+        </div>
+        <p>Ice Cream</p>
+      </a>
+      <a class="filter-card">
+        <div class="filter-icon">
+          <i class="fa-solid fa-mug-saucer"></i>
+        </div>
+        <p>Coffee</p>
+      </a>
+      <a class="filter-card">
+        <div class="filter-icon">
+          <i class="fa-solid fa-fish-fins"></i>
+        </div>
+        <p>Seafood</p>
+      </a>
+      <a class="filter-card">
+        <div class="filter-icon">
+          <i class="fa-brands fa-nutritionix"></i>
+        </div>
+        <p>Healthy</p>
+      </a>
+    </div>
+  </div>
+  <hr class="divider" />
+  <!-- list of food items -->
+  <div class="main-detail">
+    <h2 class="main-title">Choose Order</h2>
+    <div class="detail-wrapper">
+      <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 mt-3">
+        <%for(recipie of recipies){ %>
+        <a href="/recipies/<%=recipie._id%>" class="recipie-link mt-3">
+          <div class="col detail-card">
+            <img class="detail-img" src="<%=recipie.image.url%>" />
+            <div class="detail-desc">
+              <div class="detail-name">
+                <h4><%=recipie.name %></h4>
+                <p class="detail-sub">
+                  Lorem ipsum dolor sit amet consectetur provident doloremque
+                  minima
+                </p>
+                <p class="price">
+                  &#8377;<%=recipie.price.toLocaleString("en-IN") %>
+                </p>
+              </div>
+              <ion-icon class="cartIcon" name="cart-outline"></ion-icon>
+            </div>
+          </div>
+        </a>
+        <%} %>
+      </div>
+    </div>
+  </div>
+
+  <h4 class="newRecipie"><a href="/recipies/new">Add new Recipie</a></h4>
+</div>

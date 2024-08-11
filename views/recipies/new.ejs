@@ -1,0 +1,63 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row mt-3">
+  <div class="col-8 offset-2">
+    <br /><br />
+    <h3>Create a New Recipie</h3>
+    <form
+      method="post"
+      action="/recipies"
+      novalidate
+      class="needs-validation"
+      enctype="multipart/form-data"
+    >
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input
+          name="recipie[name]"
+          placeholder="Name of your Recipie"
+          type="text"
+          class="form-control"
+          required
+        />
+        <div class="valid-feedback">Name looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea
+          name="recipie[description]"
+          type="text"
+          class="form-control"
+          required
+        ></textarea>
+        <div class="invalid-feedback">Please enter a short description</div>
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Upload Listing Image</label>
+        <input name="recipie[image]" type="file" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input
+          name="recipie[price]"
+          placeholder="1200"
+          class="form-control"
+          required
+        />
+        <div class="invalid-feedback">Price should be valid</div>
+      </div>
+      <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <input
+          name="recipie[category]"
+          placeholder="Name of your Recipie"
+          type="text"
+          class="form-control"
+          required
+        />
+      </div>
+      <!-- we make key value pairs for listing another way to access these fiels -->
+      <button class="btn btn-dark add-btn mt-3">Add</button>
+      <br /><br />
+    </form>
+  </div>
+</div>

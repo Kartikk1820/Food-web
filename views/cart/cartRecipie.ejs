@@ -1,0 +1,39 @@
+<% layout("/layouts/boilerplate") %>
+
+<h1>Cart Details</h1>
+<% if (recipieIds.length > 0) { %>
+<ul>
+  <% recipieIds.forEach(function(item) { %>
+  <li><%= item %></li>
+  <% }); %>
+</ul>
+<% } else { %>
+<p>Your cart is empty.</p>
+<% } %> <% for(cartItem of cartItems){ %>
+<div class="cartRecipie mt-3">
+  <div class="recipieImgDiv">
+    <img class="recipieImg" src="<%=cartItem.image.url%>" />
+  </div>
+  <div class="recipieName"><%=cartItem.name%></div>
+  <div class="recipieEdit">
+    <div class="addBtn">
+      <i class="fa-solid fa-plus"></i>
+    </div>
+    <div class="recipiecount"><%= cartItem.quantity %></div>
+    <div class="subBtn">
+      <i class="fa-solid fa-minus"></i>
+    </div>
+  </div>
+  <div class="recipiePrice">
+    <a class="priceVal">&#8377;<%=cartItem.price.toLocaleString("en-IN") %></a>
+  </div>
+  <div class="editrecipie">
+    <ion-icon name="close-circle-outline"></ion-icon>
+  </div>
+</div>
+<% }%>
+<div class="amount mt-3">
+  <p>Total Price</p>
+  <p class="totalPrice">0</p>
+</div>
+</div>

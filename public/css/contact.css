@@ -1,0 +1,42 @@
+.inner-container {
+  width: 100%;
+  background: linear-gradient(rgba(111, 97, 97, 0.8), rgba(111, 97, 97, 0.8)),
+    url("https://wallpaper.dog/large/20483613.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 200px;
+}
+.get-in-touch {
+  margin-top: 10rem;
+}
+.get-in-touch-heading {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+.icon {
+  color: #e91e63;
+}
+.form-container {
+  background: linear-gradient(
+    to top left,
+    rgb(247, 218, 244),
+    rgb(255, 230, 251)
+  );
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 70px;
+  border: #040204;
+}
+.submit-btn {
+  background-color: #fda8af;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  width: 40%;
+  margin-left: 30%;
+}

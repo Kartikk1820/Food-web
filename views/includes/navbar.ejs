@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand logo" href="#">Food Web</a>
+    <!--profile icon on left side of navbar-->
+    <div class="profile">
+      <a class="cart" href="/cartItems"
+        ><span><i class="fa-solid fa-cart-shopping carticon"></i></span>
+        <span class="badge"></span>
+      </a>
+      <!-- <a class="user" href="#"><i class="fa-regular fa-user"></i> </a> -->
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/recipies">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/services">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contactUs">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/offers">Offers</a>
+        </li>
+      </ul>
+      <div class="search">
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+      <div class="navbar-nav ms-auto">
+        <% if(!currUser){ %>
+
+        <a class="nav-link" href="/signup"><b>Sign up</b></a>
+        <a class="nav-link" href="/login"><b>Log in</b></a>
+        <% } %> <% if(currUser){ %>
+        <a class="nav-link" href="/recipies/new">New Recipie</a>
+        <a class="nav-link" href="/logout"><b>Log out</b></a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>
