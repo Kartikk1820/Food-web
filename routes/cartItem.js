@@ -88,7 +88,7 @@ router.get(
 );
 
 router.get("/cartItems/placeOrder", (req, res) => {
-  console.log(req.body);
+  res.redirect("/");
 });
 
 // router.post("/cart", async (req, res) => {
