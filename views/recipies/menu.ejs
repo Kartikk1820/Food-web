@@ -10,7 +10,7 @@
     <h2>Snacks</h2>
 
     <div class="menu-items about-us-dishes">
-      <%for(recipie of recipies){ %> <%if(recipie.category == "Snacks") { %>
+      <%for(recipie of recipies){if(recipie.category == "Snacks") { %>
       <a href="/recipies/<%=recipie._id%>" class="recipie-link mt-3">
         <div class="card my-5 p-4">
           <img
@@ -35,7 +35,7 @@
     <h2>Desert</h2>
 
     <div class="menu-items about-us-dishes">
-      <%for(recipie of recipies){ %> <%if(recipie.category == "Desert") { %>
+      <%for(recipie of recipies){if(recipie.category == "Desert") { %>
       <a href="/recipies/<%=recipie._id%>" class="recipie-link mt-3">
         <div class="card my-5 p-4">
           <img
@@ -60,7 +60,7 @@
     <h2>Juices</h2>
 
     <div class="menu-items about-us-dishes">
-      <%for(recipie of recipies){ %> <%if(recipie.category == "Juices") { %>
+      <%for(recipie of recipies){ if(recipie.category == "Juices") { %>
       <a href="/recipies/<%=recipie._id%>" class="recipie-link mt-3">
         <div class="card my-5 p-4">
           <img
@@ -85,8 +85,7 @@
     <h2>Indian Thali</h2>
 
     <div class="menu-items about-us-dishes">
-      <%for(recipie of recipies){ %> <%if(recipie.category == "Indian Thali") {
-      %>
+      <%for(recipie of recipies){if(recipie.category == "Indian Thali") { %>
       <a href="/recipies/<%=recipie._id%>" class="recipie-link mt-3">
         <div class="card my-5 p-4">
           <img
