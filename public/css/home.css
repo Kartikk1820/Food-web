@@ -196,6 +196,9 @@
   .image-text-third {
     font-size: 1rem;
   }
+  .about-us-heading h1 {
+    font-size: 1.3rem;
+  }
 }
 @media screen and (max-width: 1033px) {
   .box {
@@ -232,6 +235,9 @@
     justify-content: center;
     text-align: center;
   }
+  .about-us-heading h1 {
+    padding: 10px 30px 10px 30px;
+  }
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .image-text-first {
@@ -253,5 +259,14 @@
   }
   .image-text-third {
     font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .card-img {
+    height: inherit;
+    width: inherit;
+  }
+  .about-us-heading h1 {
+    padding: 0 5px 0 5px;
   }
 }
