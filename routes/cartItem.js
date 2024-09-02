@@ -40,7 +40,7 @@ router.post("/addToCart/:id", saveredirectUrl, isLoggedIn, async (req, res) => {
     });
     // console.log(updatedCartItem);
     req.flash("success", "Item Added to Cart!");
-    res.redirect("/recipies");
+   return res.redirect("/recipies");
   } else {
     try {
       const newCartItem = new CartItem({
@@ -53,7 +53,7 @@ router.post("/addToCart/:id", saveredirectUrl, isLoggedIn, async (req, res) => {
       // console.log(newCartItem);
       await newCartItem.save();
       req.flash("success", "Item Added to Cart!");
-      res.redirect("/recipies");
+      return res.redirect("/recipies");
     } catch (error) {
       res.status(500).json({ message: "Error adding recipe to cart" });
     }
