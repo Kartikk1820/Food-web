@@ -142,7 +142,7 @@
   font-weight: 600;
 }
 .box-main {
-  height: 42vh;
+/*   height: 42vh; */
   width: 250px;
   border-radius: 15px;
   background-color: transparent !important;
@@ -205,12 +205,12 @@
     padding: 0 !important;
   }
   .box-main {
-    height: 35vh;
+/*     height: 35vh; */
     width: 350px;
   }
-  .services {
+/*   .services {
     flex-direction: column;
-  }
+  } */
   .about-us-dishes {
     flex-direction: column;
   }
