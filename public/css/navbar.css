@@ -149,7 +149,7 @@ a {
 
   .navbar-menu {
     position: absolute;
-    top: 55px;
+    top: 50px;
     left: 0;
     background-color: var(--whiteColor);
     width: 100%;
@@ -173,6 +173,9 @@ a {
 
   .navbar-toggle {
     display: block;
+  }
+    .navbar {
+    padding: 1vh;
   }
 }
 
