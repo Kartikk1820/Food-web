@@ -1,65 +1,74 @@
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
-  <div class="container-fluid">
-    <a class="navbar-brand logo" href="#">Food Web</a>
-    <!--profile icon on left side of navbar-->
-    <div class="profile">
-      <a class="cart" href="/cartItems"
-        ><span><i class="fa-solid fa-cart-shopping carticon"></i></span>
-        <span class="badge"></span>
-      </a>
-      <!-- <a class="user" href="#"><i class="fa-regular fa-user"></i> </a> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Web</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/navbar.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" id="navbarToggle">☰</button>
+        </div>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/recipies">Menu</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/services">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/contactUs">Contact Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/offers">Offers</a>
-        </li>
-      </ul>
-      <div class="search">
-        <form class="d-flex" role="search">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-      <div class="navbar-nav ms-auto">
-        <% if(!currUser){ %>
+        <div class="navbar-heading">
+          <h1 class="navbar-title">Food Web</h1>
+        </div>
 
-        <a class="nav-link" href="/signup"><b>Sign up</b></a>
-        <a class="nav-link" href="/login"><b>Log in</b></a>
-        <% } %> <% if(currUser){ %>
-        <a class="nav-link" href="/recipies/new">New Recipie</a>
-        <a class="nav-link" href="/logout"><b>Log out</b></a>
-        <% } %>
+        <div class="user">
+          <div class="profile">
+            <i class="fa-regular fa-user"></i>
+            <div class="dropdown-menu">
+              <% if(!currUser){ %>
+              <a href="/login">Login</a>
+              <a href="/signup">Sign up</a>
+              <% } %> 
+              <% if(currUser){ %>
+              <a href="#">Profile</a>
+              <a href="/logout">Logout</a>
+              <a href="/recipies/new">New Recipe</a>
+              <% } %>
+            </div>
+          </div>
+          <div class="cart">
+            <a href="#" class="cart-icon"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="navbar-menu" id="navbarMenu">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/recipies">Menu</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contactUs">Contact Us</a></li>
+            <li><a href="/offers">Offers</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </div>
-</nav>
+    </nav>
+
+    <script>
+      document
+        .getElementById("navbarToggle")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("navbarMenu");
+          if (menu.style.display === "block") {
+            menu.style.display = "none";
+          } else {
+            menu.style.display = "block";
+          }
+        });
+    </script>
+  </body>
+</html>
