@@ -164,6 +164,7 @@ a {
     padding: 0;
     height: 100%;
     justify-content: flex-start;
+    margin-top: 1rem;
   }
 
   .navbar-menu li {
