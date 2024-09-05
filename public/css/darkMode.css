@@ -1,0 +1,66 @@
+/* Dark Mode */
+.dark-mode {
+  background-color: rgb(24, 26, 27);
+  color: #ffffff;
+}
+.dark-mode .card {
+  background-color: rgb(31, 34, 35);
+  border-color: rgb(245, 125, 125);
+  color: #ffffff;
+}
+.dark-mode .navbar-toggle,
+.dark-mode h1,
+.dark-mode .navbar {
+  background-color: rgb(24, 26, 27);
+  color: rgb(232, 230, 227);
+}
+.dark-mode .about-us-heading h1 {
+  color: rgb(215, 99, 99);
+}
+.dark-mode .about-us,
+.dark-mode .menu-container,
+.dark-mode .f-info {
+  background-color: rgb(34, 36, 38);
+}
+.dark-mode .cart,
+.dark-mode .navbar-menu {
+  background-color: rgb(24, 26, 27);
+  color: #ffffff;
+}
+.dark-mode a,
+.dark-mode .dropdown-menu a {
+  text-decoration-color: initial;
+  color: rgb(211, 207, 201);
+}
+.dark-mode .price {
+  color: #8eefdd;
+}
+.dark-mode .menu-container h2 {
+  color: rgb(218, 118, 118);
+}
+.dark-mode .form-container {
+  background-image: linear-gradient(
+    to left top,
+    rgb(64, 14, 59),
+    rgb(66, 0, 55)
+  );
+  background-color: initial;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
+  border-color: rgb(139, 129, 114);
+}
+.dark-mode .submit-btn {
+  background-color: rgb(102, 2, 11);
+  color: rgb(232, 230, 227);
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+}
+.dark-mode .dropdown-menu {
+  background-color: rgb(24, 26, 27);
+}
+.dark-mode .form-control {
+  color: var(--darkreader-text--bs-body-color, #e8e6e3);
+  background-color: var(--darkreader-bg--bs-body-bg, #181a1b);
+  border: var(--darkreader-border--bs-border-width) solid
+    var(--darkreader-border--bs-border-color);
+}
